@@ -1,13 +1,18 @@
-<ion-view view-title="Fiche Innovation">
-
-    <ion-header-bar>
-    	<h1 class="title">Fiche Innovation</h1>
-    </ion-header-bar>
-
+<ion-view view-title="Fiche Innovation {{ficheInnov.innovNumber}}">
     <ion-content>
+    <img ng-src="{{ficheInnov.path.pioneerPicture}}" style="width: 64px; height: 64px">
+    <h1>
+    	{{ficheInnov.innovName}}
+    </h1>
+    <p>
+      {{ficheInnov.textFields.innovation}}
+    </p>
+    <h1>
+    	{{ficheInnov.pionnerName}}
+    </h1>
+    <p>
+      {{ficheInnov.textFields.pionner}}
+    </p>
+
     </ion-content>
-
-    <ion-footer-bar>
-    </ion-footer-bar>
-
 </ion-view>

@@ -1,11 +1,21 @@
 <ion-view view-title="Liste des innovations">
+<div class="bar bar-header item-input-inset">
+		<label class="item-input-wrapper">
+			<i class="icon ion-ios-search placeholder-icon"></i>
+			<input type="search" placeholder="Recherche" ng-model="recherche">
+		</label>
 
+		<button class="button button-clear">
+		Annuler
+		</button>
+	</div>
   <ion-content>
-
-    <div ng-repeat="innovation in innovations" class="list">
-      <a class="item item-avatar item-remove-animate item-icon-right" href="#">
+  
+    <div ng-repeat="innovation in innovations | filter:recherche" class="list">
+      <a class="item item-avatar item-remove-animate item-icon-right" 
+      href="#/tab/listeInnovations/{{innovation.innovNumber}}">
         <img src="{{innovation.path.pioneerPicture}}">
-        <h2>{{ innovation.title }}</h2>
+        <h2>{{ innovation.innovName }}</h2>
         <p>{{ innovation.textFields.enBref }}</p>
       </a>
     </div>

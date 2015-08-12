@@ -2,7 +2,8 @@
 
 angular.module('VillaShamengo.controllers')
 
-.controller('ficheInnovationCtrl', ['$scope', 
-	function(){
+.controller('ficheInnovationCtrl',
+	function($scope, Innov, $stateParams){
+		$scope.ficheInnov = Innov.get($stateParams.innovationId); 
 	
-}]); 
+}); 
