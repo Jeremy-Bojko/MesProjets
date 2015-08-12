@@ -1,0 +1,16 @@
+<ion-view view-title="Liste des innovations">
+
+  <ion-content>
+
+    <div ng-repeat="innovation in innovations" class="list">
+      <a class="item item-avatar item-remove-animate item-icon-right" href="#">
+        <img src="{{innovation.path.pioneerPicture}}">
+        <h2>{{ innovation.title }}</h2>
+        <p>{{ innovation.textFields.enBref }}</p>
+      </a>
+    </div>
+
+  </ion-content>
+
+</ion-view>
+
