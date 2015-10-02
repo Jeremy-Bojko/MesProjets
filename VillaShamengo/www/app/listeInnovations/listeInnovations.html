@@ -1,26 +1,30 @@
 <ion-view view-title="Liste des innovations">
-<div class="bar bar-header item-input-inset">
-		<label class="item-input-wrapper">
-			<i class="icon ion-ios-search placeholder-icon"></i>
-			<input type="search" placeholder="Recherche" ng-model="recherche">
-		</label>
-
-		<button class="button button-clear">
-		Annuler
-		</button>
-	</div>
   <ion-content>
-  
-    <div ng-repeat="innovation in innovations | filter:recherche" class="list">
-      <a class="item item-avatar item-remove-animate item-icon-right" 
-      href="#/tab/listeInnovations/{{innovation.innovNumber}}">
-        <img src="{{innovation.path.pioneerPicture}}">
-        <h2>{{ innovation.innovName }}</h2>
-        <p>{{ innovation.textFields.enBref }}</p>
+
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="tel" placeholder="Recherche" ng-model="search">
+      </label>
+
+      <button class="button button-clear">
+        Annuler
+      </button>
+    </div>
+
+    <div ng-repeat="innovation in innovations | filter:{innovNumber:search}" class="card">
+      <a class="item item-thumbnail-left ion-chevron-right" href="#/tab/listeInnovations/{{innovation.innovNumber}}">
+        <img src="img/{{innovation.pioneerPicture}}">
+        <h4 class="descript"style="white-space:normal">{{innovation.innovName}}</h4>
+        <p>{{innovation.pioneerName}}</p>
       </a>
+
+      <div id="{{innovation.category}}"class="item item-divider">
+        <a id="innovNumber">{{innovation.innovNumber}}</a>
+        <a id="innovCategory">{{innovation.category}}</a>
+      </div>
     </div>
 
   </ion-content>
-
 </ion-view>
 

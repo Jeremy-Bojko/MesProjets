@@ -1,1 +1,43 @@
-/* Empty. Add your own CSS if you like */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Liste innovation*/
+#innovNumber{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#innovCategory{
+	position: relative;
+	left: 50%;
+	right: 50%;
+}
+
+#Eau{
+	background-color: #94C21C;
+}
+
+#Nourriture{
+	background-color: #E74C9C;
+}
+
+
+
+
+
+
+	/* Empty. Add your own CSS if you like */

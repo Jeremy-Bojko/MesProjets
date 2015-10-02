@@ -1,18 +1,34 @@
 <ion-view view-title="Fiche Innovation {{ficheInnov.innovNumber}}">
     <ion-content>
-    <img ng-src="{{ficheInnov.path.pioneerPicture}}" style="width: 64px; height: 64px">
-    <h1>
-    	{{ficheInnov.innovName}}
-    </h1>
-    <p>
-      {{ficheInnov.textFields.innovation}}
-    </p>
-    <h1>
-    	{{ficheInnov.pionnerName}}
-    </h1>
-    <p>
-      {{ficheInnov.textFields.pionner}}
-    </p>
+        <ion-item>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wyVM1evRxNw" frameborder="0" width="560" height="315"></iframe>
+            </div>
+        </ion-item>
+        <img ng-src="img/{{ficheInnov.pioneerPicture}}" style="width: 64px; height: 64px">
+        <h1>
+            {{ficheInnov.innovName}}
+        </h1>
+        <h5>
+            {{ficheInnov.pioneerName}}
+        </h5>
+        <p>
+            {{ficheInnov.pionneerCountry}}
+        </p>
+        <p>
+            {{ficheInnov.description}}
+        </p>
+        <p>
+            {{ficheInnov.pionneerName}}
+        </p>
+        <p>
+            {{ficheInnov.category}}
+        </p>
+        <p>
+            {{ficheInnov.innovNumber}}
+        </p>
+        <a href="{{ficheInnov.ShamengoLink}}">En savoir plus</a>
+
 
     </ion-content>
 </ion-view>
